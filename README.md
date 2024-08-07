@@ -38,7 +38,7 @@ $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-> **Run *:PlugInstall* inside Vim!**
+> **Run *`:PlugInstall`* inside Vim!**
 
 ```
 $ mkdir ~/.vim/colors
