@@ -53,7 +53,7 @@ $ rm -fr ~/.vim/plugged/lightline.vim/autoload/lightline/colorscheme/*
 $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-> **Run *<prefix>I* inside tmux!**
+> **Run `*<prefix>I*` inside tmux!**
 
 ### Extra
 
