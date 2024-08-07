@@ -31,7 +31,7 @@ $ stow .
 
 ## Post-Install Actions
 
-* **For Vim:**
+- **For Vim:**
 
 ```
 $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -46,6 +46,14 @@ $ cp ~/.vim/plugged/vim/colors/* ~/.vim/colors/
 $ # Optional: remove extra colorscheme files
 $ rm -fr ~/.vim/plugged/lightline.vim/autoload/lightline/colorscheme/*
 ```
+
+- **For tmux:**
+
+```
+$ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+> **Run *<prefix>I* inside tmux!**
 
 ### Extra
 
