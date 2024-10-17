@@ -5,7 +5,7 @@
 " ENVIRONMENT ---------------------------------------------------------------- {{{
 
 set nocompatible
-"set mouse=a
+set mouse-=a
 
 filetype plugin indent on
 syntax on
