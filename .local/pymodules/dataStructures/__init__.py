@@ -1,0 +1,4 @@
+# Load each class when importing the module
+from .stack import Stack
+from .queue import Queue
+from .deque import Deque
