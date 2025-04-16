@@ -123,14 +123,9 @@ fi
 export PATH=~/bin:~/.local/scripts:"$PATH"
 
 # Add custom environment variables
-export REPLYTO=up201703852@edu.fc.up.pt
+export REPLYTO=nunoazev.fcup@gmail.com
 export EDITOR="/usr/bin/vim"
-export PYTHONPATH="$PYTHONPATH":~/.local/pymodules
 
-# VTE Configuration
-#if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-#  source /etc/profile.d/vte.sh
-#fi
 
 
 

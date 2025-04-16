@@ -56,8 +56,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
-  Plug 'prabirshrestha/vim-lsp'
-  Plug 'mattn/vim-lsp-settings'
 
 call plug#end()
 
@@ -101,34 +99,6 @@ inoremap <C-c> <esc>
 " }}}
 
 
-" LSP ---------------------------------------------------------------- {{{
-
-function! OnLspBufferEnabled() abort
-    " Toggle completion with docs using <CTRL-X-O>
-    setlocal omnifunc=lsp#complete
-    setlocal signcolumn=yes
-    nmap <buffer> gd <plug>(lsp-definition)
-    nmap <buffer> gr <plug>(lsp-references)
-    nmap <buffer> gI <plug>(lsp-implementation)
-    nmap <buffer> <leader>D <plug>(lsp-type-definition)
-    nmap <buffer> <leader>ds <plug>(lsp-document-symbol-search)
-    nmap <buffer> <leader>ws <plug>(lsp-workspace-symbol-search)
-    nmap <buffer> <leader>rn <plug>(lsp-rename)
-    nmap <buffer> <leader>ca <plug>(lsp-code-action)
-    nmap <buffer> gD <plug>(lsp-declaration)
-    nmap <buffer> K <plug>(lsp-hover)
-    nmap <buffer> [d <plug>(lsp-previous-diagnostic)
-    nmap <buffer> ]d <plug>(lsp-next-diagnostic)
-endfunction
-	
-augroup lsp_install
-  au!
-  autocmd User lsp_buffer_enabled call OnLspBufferEnabled()
-augroup END
-
-" }}}
-
-
 " VIMSCRIPT -------------------------------------------------------------- {{{
 
 " Enable code folding with the marker method
@@ -138,5 +108,4 @@ augroup filetype_vim
 augroup END
 
 " }}}
-
 
