@@ -20,8 +20,8 @@ alias root='sudo -i'
 
 # Report disk space
 ds() {
-    echo "Disk Space Utilization for $HOSTNAME"
-    df -h
+  echo "Disk Space Utilization for $HOSTNAME"
+  df -h
 }
 
 # Get a command from history based on part of it (an expression)
@@ -41,41 +41,41 @@ ping_host() {
     return 1
   fi
   target="$1"
-  ping -c1 "$target" &> /dev/null || \
-    { echo "Host '$target' unreachable." >&2; return 1; }
+  ping -c1 "$target" &>/dev/null ||
+    {
+      echo "Host '$target' unreachable." >&2
+      return 1
+    }
   return 0
 }
 
 # Display a summary of system health
 status() {
-    { # Display system uptime
-      echo -e "\nuptime:"
-      uptime
-      # Display disk resources skipping snap's pseudo disks
-      echo -e "\ndisk space:"
-      df -h 2> /dev/null | grep -v snap
-      echo -e "\ninodes:"
-      df -i 2> /dev/null | grep -v snap
-      echo -e "\nblock devices:"
-      /bin/lsblk | grep -v snap
-      # Display memory resources
-      echo -e "\nmemory:"
-      free -m
-      # Display latest log file entries
-      if [[ -r /var/log/syslog ]]; then
-        echo -e "\nsyslog:"
-        tail /var/log/syslog
-      fi
-      if [[ -r /var/log/messages ]]; then
-        echo -e "\nmessages:"
-        tail /var/log/messages
-      fi
-      if [[ -r /var/log/journal ]]; then
-        echo -e "\njournal:"
-        journalctl | tail
-      fi
-    } | less
+  { # Display system uptime
+    echo -e "\nuptime:"
+    uptime
+    # Display disk resources skipping snap's pseudo disks
+    echo -e "\ndisk space:"
+    df -h 2>/dev/null | grep -v snap
+    echo -e "\ninodes:"
+    df -i 2>/dev/null | grep -v snap
+    echo -e "\nblock devices:"
+    /bin/lsblk | grep -v snap
+    # Display memory resources
+    echo -e "\nmemory:"
+    free -m
+    # Display latest log file entries
+    if [[ -r /var/log/syslog ]]; then
+      echo -e "\nsyslog:"
+      tail /var/log/syslog
+    fi
+    if [[ -r /var/log/messages ]]; then
+      echo -e "\nmessages:"
+      tail /var/log/messages
+    fi
+    if [[ -r /var/log/journal ]]; then
+      echo -e "\njournal:"
+      journalctl | tail
+    fi
+  } | less
 }
-
-
-
