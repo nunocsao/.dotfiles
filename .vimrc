@@ -76,6 +76,11 @@ nnoremap O O<esc>
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
+" Time to use Vim motions!!
+nnoremap <left> :echo "Use H to move left!!"<CR>
+nnoremap <right> :echo "Use L to move right!!"<CR>
+nnoremap <up> :echo "Use K to move up!!"<CR>
+nnoremap <down> :echo "Use J to move down!!"<CR>
 " Navigate the split view using Vim motions
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
