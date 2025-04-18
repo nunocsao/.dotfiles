@@ -25,8 +25,9 @@ set wildignore=*.exe,*.dll
 set scrolloff=8
 set nowrap
 set colorcolumn=80
+set cursorline
 
-colorscheme desert
+colorscheme habamax
 set laststatus=2
 hi NonText ctermbg=none
 " If transparency allowed
@@ -50,6 +51,10 @@ set showmatch
 
 " PLUGINS ---------------------------------------------------------------- {{{
 
+" Local Vim packages
+packadd! matchit
+
+" Online Vim plugins (from GitHub)
 call plug#begin('~/.vim/plugged')
 
   Plug 'itchyny/lightline.vim'
